@@ -1,0 +1,46 @@
+{% extends 'master1.html' %}
+
+
+{% block content %}
+  <div class="home">
+
+    <div class="main-home">
+      <div class="home-inner-content">
+      </div>
+
+      <div class="home-inner-content">
+        <div class="home-text-content">
+          <h1 style="position: absolute; left: 100px; top: 200px">contact us for Best skincare services</h1>
+          <p style="position: absolute; left: 100px; top: 270px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, voluptatem officiis quas illum
+            pariatur, sint amet dignissimos asperiores</p>
+        <h2 style="color:black; position: absolute; left: 100px; top: 150px; font-weight: bold; text-decoration: double; font-size: 30px;">WELCOME {{user.username}}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+          <div class="counter-box">
+              <i class="fa fa-plane"></i>
+              <h2 class="counter">{{total_appoinment}}</h2>
+              <h4>TOTAL APPOINTMENTS</h4>
+          </div>
+      </div>
+      <div class="col">
+          <div class="counter-box">
+              <i class="fa fa-users"></i>
+              <h2 class="counter">{{total_review}}</h2>
+              <h4>TOTAL REVIEW</h4>
+          </div>
+      </div>
+      <div class="col">
+          <div class="counter-box">
+              <i class="fa fa-coffee"></i>
+              <h2 class="counter">{{total_Inquiry}}</h2>
+              <h4>TOTAL INQUIRY</h4>
+          </div>
+      </div>
+  </div>
+
+</div>
+{% endblock %}

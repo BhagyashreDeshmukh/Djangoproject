@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(../static/our-menu-bg-1.png) left top no-repeat, url(../static/our-menu-bg-3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        table {
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            border: 3px solid #e58f00;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h1 style="color: white; position: absolute; top: 50px; left: 610px; background-color: #e58f00;">~~ ORDERS ~~
+        </h1>
+        <table cellpadding="10px" cellspacing="5px" border="2">
+            <thead>
+                <tr class="table-header" style="color: white; font-size: 20px;">
+                    <td>Name</td>
+                    <td>Date</td>
+                    <td>Services</td>
+                    <td>Email</td>
+                    <td>Time</td>
+                </tr>
+            </thead>
+            {% for i in obj %}
+            <tr style="color: white; font-size: 20px;">
+                <td>{{i.name}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.id_services}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.time}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+        </div>
+    </form>
+</body>
+
+</html>

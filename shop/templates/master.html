@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/css.css">
+  <link rel="stylesheet" href="../static/main.css">
+  <link rel="stylesheet" href="../static/main.js">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="#"><img src="../static/Logo.webp" width="80px" height="60px"></a>
+    <h1 id="Title">Beauty Center</h1>
+    <nav class="navbar">
+      <a href="{%url 'shop:home'%}">home</a>
+      <a href="{%url 'shop:about'%}">about</a>
+      <a href="{%url 'shop:services'%}">Services</a>
+      <a href="{%url 'owner:log'%}">Admin Login</a>
+      <a href="{%url 'customer:book'%}">Book Appointments</a>
+      <a href="{%url 'customer:review'%}">Add Reviews</a>
+      <a href="{%url 'shop:team'%}">team</a>
+      <a href="{%url 'shop:blog'%}">blog</a>
+    </nav>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+
+
+    <section class="footer">
+      <img src="../static/Logo.webp" class="logo" width="100px" height="100px">
+
+      <div class="container">
+        <div>
+          <h3>ABOUT US</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </div>
+
+        <div>
+          <h3>GET NEWS & OFFERS</h3>
+          <input type="email" name="" placeholder="enter your email">
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>CONTACT US</h3>
+          <span>BeautyCenter</span>
+          <span>+ (91)976377673</span>
+          <span>BeautyCenter@gmail.com</span>
+          <span>www.beautycenter.in</span>
+        </div>
+      </div>
+
+      <p>&copy;2022 Reserved by Beauty Center</p>
+    </section>
+    <!--aos data-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>

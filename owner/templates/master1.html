@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/css.css">
+  <link rel="stylesheet" href="../static/Counter.css">
+  <link rel="stylesheet" href="../static/jquery.counterup.min.js">
+  <link rel="stylesheet" href="../static/main.css">
+  <link rel="stylesheet" href="../static/main.js">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="#"><img src="../static/Logo.webp" width="80px" height="60px"></a>
+    <h1 id="Title">Beauty Center</h1>
+    <nav class="navbar">
+      <a href="{%url 'shop:about'%}">about</a>
+      <a href="{%url 'shop:team'%}">team</a>
+      <a href="{%url 'shop:blog'%}">blog</a>
+      {% if user.is_authenticated %}
+      <a href="{%url 'owner:Myorders'%}">My Orders</a>
+      <a href="{%url 'owner:viewreview'%}">View Reviews</a>
+      <a href="{%url 'owner:inquiry'%}">View Inquiry</a>
+      <a href="{%url 'owner:services'%}">Add Services</a>
+      <a href="{%url 'owner:ourservices'%}">Our Services</a>
+      <a href="{%url 'owner:logout'%}">Logout</a>
+    {% endif %}
+    </nav>
+  </header>
+  {% block content %}
+  {% endblock %}
+
+    <!--aos data-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+</body>
+
+</html>

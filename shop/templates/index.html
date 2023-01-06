@@ -1,0 +1,210 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+  <div class="home">
+
+    <div class="main-home">
+      <div class="home-inner-content">
+        <div class="home-image">
+          <img src="../static/Parlour.avif" alt="">
+        </div>
+      </div>
+
+      <div class="home-inner-content">
+        <div class="home-text-content">
+          <h1>contact us for Best skincare services</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, voluptatem officiis quas illum
+            pariatur, sint amet dignissimos asperiores</p>
+          <a href="{%url 'shop:order'%}">contact us</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <section class="welcome" id="about">
+    <h1 class="heading">WELCOME TO Beauty Center</h1>
+    <center>
+      <h3 class="sub-heading"> ~ Products & Services ~ </h3>
+    </center>
+
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="../static/Img1.avif">
+        </div>
+
+        <div class="content">
+          <h3>Face Clean Up</h3>
+          <p>Everyday pollution, tanning and stress take a toll on your face. Treating your face weekly to remove dirt
+            and tan is vital for facial skin health.
+
+            At Naturals, we offer face clean up options for all skin types. A face scrub to remove any impurities hidden
+            in your pores followed by a face massage nourishes your face from within, giving your skin a Naturals glow!
+
+            Keep your skin healthy, hydrated and glowing!</p>
+
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="../static/Img2.avif">
+        </div>
+
+        <div class="content">
+          <h3>Facial</h3>
+          <p>A facial adds the ‘value’ in ‘face value’!
+
+            A facial is not just about pampering yourself, it also does wonders for your skin! A facial done by a
+            professional, deep cleans and hydrates your skin as well as relieves acne. A good facial also improves blood
+            circulation, giving your skin a healthy glow.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="../static/Img3.avif">
+        </div>
+
+        <div class="content">
+          <h3>Face Masks</h3>
+          <p>A facial mask is a beauty and cleansing treatment that is designed to tackle specific problems for each skin type. A facial mask deep-cleans nourishes and brightens your skin as well as heals acne scars and hyperpigmentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-menu" id="menu">
+    <h1 class="heading">our Services</h1>
+    <center>
+      <h3 class="sub-heading"> ~ see what we offer ~ </h3>
+    </center>
+
+    <div class="menu-container">
+
+      <div class="item">
+        <div class="item-name">
+          <h2>HAIR CARE</h2>
+          <img src="../static/Logo2.jpg">
+        </div>
+
+        <div class="item-body">
+          <div class="item-menu">
+            <h3>Hair Cuts & Styling</h3>
+            <span class="dots"></span>
+            <h3>Rs.1000</h3>
+
+            <ul style="color: white;">
+              <li>Accentuate your best features with the perfect mane</li>
+            </ul>
+          </div>
+
+          <div class="item-menu">
+            <h3>
+              Hair Colouring & Highlights</h3>
+            <span class="dots"></span>
+            <h3>Rs.2500</h3>
+
+            <ul style="color: white;">
+              <li>Reinvent your whole look with a dash of colour!</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-name">
+          <h2>SPA</h2>
+          <img src="../static/Logo2.jpg">
+        </div>
+
+        <div class="item-body">
+          <div class="item-menu">
+            <h3>Hair Spa</h3>
+            <span class="dots"></span>
+            <h3>Rs.2000</h3>
+
+            <ul style="color: white;">
+              <li>Pampering yourself and your hair with a good hair spa is a must! </li>
+            </ul>
+          </div>
+
+          <div class="item-menu">
+            <h3>Facial</h3>
+            <span class="dots"></span>
+            <h3>Rs.1500</h3>
+
+            <ul style="color: white;">
+              <li>A facial adds the ‘value’ in ‘face value’!</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="item">
+        <div class="item-name">
+          <h2>FACE CARE</h2>
+          <img src="../static/Logo2.jpg">
+        </div>
+
+        <div class="item-body">
+          <div class="item-menu">
+            <h3>De-Tan</h3>
+            <span class="dots"></span>
+            <h3>Rs.2000</h3>
+
+            <ul style="color: white;">
+              <li>De-Tanning at the Naturals beauty parlour</li>
+            </ul>
+          </div>
+
+          <div class="item-menu">
+            <h3>Face Masks</h3>
+            <span class="dots"></span>
+            <h3>Rs.1500</h3>
+
+            <ul style="color: white;">
+              <li>Facial mask treatments at Naturals </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="item">
+        <div class="item-name">
+          <h2>BODY CARE</h2>
+          <img src="../static/Logo2.jpg">
+        </div>
+
+        <div class="item-body">
+          <div class="item-menu">
+            <h3>Pedicure</h3>
+            <span class="dots"></span>
+            <h3>Rs.2500</h3>
+
+            <ul style="color: white;">
+              <li>A pedicure is the best stress relief for the body. </li>
+            </ul>
+          </div>
+
+          <div class="item-menu">
+            <h3>Reflexology</h3>
+            <span class="dots"></span>
+            <h3>Rs.2000</h3>
+
+            <ul style="color: white;">
+              <li>De-stress and bloom from the core!</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
+    

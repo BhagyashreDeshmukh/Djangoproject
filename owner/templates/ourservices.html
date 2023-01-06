@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background:url(../static/our-menu-bg-1.png) left top no-repeat, url(../static/our-menu-bg-3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        table{
+            position: absolute;
+            top: 200px;
+            left: 590px; 
+            border: 3px solid #e58f00;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: white; position: absolute; top: 100px; left: 650px; background-color: #e58f00;">~~ Our Services ~~</h1>
+        <form method="post">
+            {% csrf_token %}
+        <table cellpadding="10px" cellspacing="5px" border="2">
+          <thead>
+            <tr class="row title" style="color: white; font-size: 20px;">
+                <td>Name</td>
+                <td>Cost</td>
+                <td colspan="2">Actions</td>
+            </tr>
+        </thead>
+            {% for i in obj %}
+            <tr style="color: white; font-size: 20px;">
+                <td>{{i.ServiceName}}</td>
+                <td>{{i.Cost}}</td>
+                <td><a href="{%url 'owner:delete' i.id%}">Delete</a></td>
+                <td><a href="{%url 'owner:edit' i.id%}">Edit</a></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+</form>
+</body>
+
+</html>
