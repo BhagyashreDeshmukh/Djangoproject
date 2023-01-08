@@ -96,3 +96,18 @@ def deletereview(request,id):
     obj=customer.reviews.objects.get(id=id)
     obj.delete()
     return redirect("/Owner-viewreview")
+
+def Order_search(request):
+    form=customer.customer.objects.all()
+    if request.method=="GET":
+        srch=request.GET.get("srch")
+        print(srch)
+        if srch!=None:
+            form=customer.customer.objects.filter(id_services__icontains=srch)
+            print(form)
+    return render(request,"Myorders.html",{"form":form})
+
+def deleteinquiry(request,id):
+    obj=shop.Contact.objects.get(id=id)
+    obj.delete()
+    return redirect("/Owner-inquiry")
