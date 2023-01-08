@@ -13,5 +13,7 @@ urlpatterns = [
         path("ourservices",v.ourservice,name="ourservices"),
         path("delete/<int:id>",v.delete,name="delete"),
         path("edit/<int:id>",v.edit,name="edit"),
-        path("deletereview/<int:id>",v.deletereview,name="deletereview")
+        path("deletereview/<int:id>",v.deletereview,name="deletereview"),
+        path("deleteinquiry/<int:id>",v.deleteinquiry,name="deleteinquiry"),
+        path("OrderSearch",v.Order_search,name="search")
 ]
