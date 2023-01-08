@@ -33,6 +33,7 @@
                 <td>Email</td>
                 <td>Subject</td>
                 <td>Message</td>
+                <td>Actions</td>
             </tr>
         </thead>
             {% for i in obj %}
@@ -41,6 +42,7 @@
                 <td>{{i.email}}</td>
                 <td>{{i.subject}}</td>
                 <td>{{i.message}}</td>
+                <td><a href="{%url 'owner:deleteinquiry' i.id%}">Delete</a></td>
             </tr>
             {%endfor%}
         </table>
