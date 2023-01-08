@@ -23,6 +23,10 @@
 </head>
 
 <body>
+     <form action="{%url 'owner:search'%}" method="get">
+        <textarea name="srch" id="" cols="50" rows="2" style="position: absolute; top: 130px; left: 550px;"></textarea>
+        <input type="submit" style="position: absolute; top: 140px; left: 960px;">
+    </form>
     <form method="post">
         {% csrf_token %}
         <h1 style="color: white; position: absolute; top: 50px; left: 610px; background-color: #e58f00;">~~ ORDERS ~~
